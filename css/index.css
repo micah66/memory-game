@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url("/images/Yankees_logo.jpg");
+  background-image: url("/images/yankees_background_logo.jpg");
   background-size: 125px 125px;
   background-repeat: repeat;
 }
@@ -9,12 +9,16 @@ body {
   height: 80vh;
   width: 70vw;
   position: absolute;
-  top: 45%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #0d2440;
-  box-shadow: 0px 0px 35px 5px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 35px 5px rgba(0,0,0,.75);
   border-radius: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
 }
 .btn {
   height: 60px;
@@ -29,10 +33,20 @@ body {
 #btnList {
   padding: 0;
   margin: 0;
+  margin-top: 2vh;
   position: absolute;
   left: 50%;
-  bottom: 3vh;
   display: flex;
   justify-content: space-between;
   transform: translateX(-50%);
+}
+.card {
+  background-image: url("/images/yankees_cardback_logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 23%;
+  width: 26%;
+  border-radius: 10%;
+  cursor: pointer;
 }
