@@ -1,1 +1,12 @@
-1. 
+1. Player selects to play a new game
+  1a. clear any previous card elements
+2. Generate a board of cards
+  2a. Generate each card
+  2b. Randomize the cards
+3. User functionality
+  3a. User can click on a card(card will flip)
+  3b. User can click on a second card(card will flip)
+4. Evaluate for match
+  4a. If match, keep flipped
+  4b. If not match, timeout, then flip back, increase attempts
+5. If all the cards are a match, the game is over.
