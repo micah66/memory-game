@@ -71,12 +71,17 @@ body {
   cursor: pointer;
 }
 
-.flipped {
+.flipped, .match {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   height: 23%;
   width: 26%;
   border-radius: 10%;
-  cursor: pointer;
+  pointer-events: none;
+
+}
+
+.disabled {
+  pointer-events: none;
 }

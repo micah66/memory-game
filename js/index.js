@@ -16,7 +16,7 @@ MemoryGame.generateCards = () => {
   MemoryGame.cards = []
   for (let i = 0; i < MemoryGame.numOfCards; i++) {
     MemoryGame.newCard = document.createElement('div')
-    MemoryGame.newCard.className = 'card yankees' + (Math.floor((i + 2) / 2))
+    MemoryGame.newCard.className = 'yankees' + (Math.floor((i + 2) / 2)) + ' card'
     MemoryGame.cards.push(MemoryGame.newCard)
   }
 }
@@ -28,7 +28,32 @@ MemoryGame.randomizeCards = () => {
     MemoryGame.shuffledCards[i][0].addEventListener('click', MemoryGame.flipCard)
   }
 }
+MemoryGame.selectedCards = []
 MemoryGame.flipCard = (e) => {
   e.target.classList.add('flipped')
   e.target.classList.remove('card')
+  MemoryGame.selectedCards.push(e.target)
+  if (MemoryGame.selectedCards.length > 1) {
+    if (MemoryGame.selectedCards[0].className === MemoryGame.selectedCards[1].className) {
+      MemoryGame.selectedCards[0].classList.add('match')
+      MemoryGame.selectedCards[0].classList.remove('flipped')
+      MemoryGame.selectedCards[1].classList.add('match')
+      MemoryGame.selectedCards[1].classList.remove('flipped')
+      MemoryGame.selectedCards = []
+    } else {
+      for (let i = 0; i < gameBoard.children.length; i++) {
+        gameBoard.children[i].classList.add('disabled')
+      }
+      setTimeout(() => {
+        MemoryGame.selectedCards[0].classList.add('card')
+        MemoryGame.selectedCards[0].classList.remove('flipped')
+        MemoryGame.selectedCards[1].classList.add('card')
+        MemoryGame.selectedCards[1].classList.remove('flipped')
+        MemoryGame.selectedCards = []
+        for (let i = 0; i < gameBoard.children.length; i++) {
+          gameBoard.children[i].classList.remove('disabled')
+        }
+      }, 1000)
+    }
+  }
 }
