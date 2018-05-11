@@ -28,3 +28,7 @@ MemoryGame.randomizeCards = () => {
     MemoryGame.shuffledCards[i][0].addEventListener('click', MemoryGame.flipCard)
   }
 }
+MemoryGame.flipCard = (e) => {
+  e.target.classList.add('flipped')
+  e.target.classList.remove('card')
+}

@@ -70,3 +70,13 @@ body {
   border-radius: 10%;
   cursor: pointer;
 }
+
+.flipped {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 23%;
+  width: 26%;
+  border-radius: 10%;
+  cursor: pointer;
+}
