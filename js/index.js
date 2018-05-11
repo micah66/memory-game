@@ -10,6 +10,9 @@ MemoryGame.start = () => {
 }
 MemoryGame.newGame = () => {
   gameBoard.innerHTML = ''
+  if (MemoryGame.winOverlay) {
+    document.body.removeChild(MemoryGame.winOverlay)
+  }
 }
 
 MemoryGame.generateCards = () => {
@@ -55,5 +58,17 @@ MemoryGame.flipCard = (e) => {
         }
       }, 1000)
     }
+  }
+  const matches = document.getElementsByClassName('match')
+  if (matches.length === MemoryGame.numOfCards) {
+    MemoryGame.winOverlay = document.createElement('div')
+    MemoryGame.winOverlay.id = 'winOverlay'
+    MemoryGame.winOverlay.innerHTML = 'Congratulations, You win!'
+    const newGameBtn = document.createElement('button')
+    newGameBtn.innerHTML = 'New Game'
+    newGameBtn.className = 'btn'
+    MemoryGame.winOverlay.appendChild(newGameBtn)
+    document.body.appendChild(MemoryGame.winOverlay)
+    newGameBtn.addEventListener('click', MemoryGame.start)
   }
 }
