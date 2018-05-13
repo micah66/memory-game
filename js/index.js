@@ -2,6 +2,7 @@ const MemoryGame = {}
 const gameBoard = document.getElementById('gameBoard')
 
 MemoryGame.numOfCards = 12
+MemoryGame.wrongGuesses = 0
 
 MemoryGame.start = () => {
   MemoryGame.newGame()
@@ -57,6 +58,7 @@ MemoryGame.flipCard = (e) => {
           gameBoard.children[i].classList.remove('disabled')
         }
       }, 1000)
+      MemoryGame.wrongGuesses++
     }
   }
   const matches = document.getElementsByClassName('match')

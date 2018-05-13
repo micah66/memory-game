@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url("/images/yankees_background_logo.jpg");
+  background-image: url("../images/yankees_background_logo.jpg");
   background-size: 125px 125px;
   background-repeat: repeat;
 }
@@ -42,26 +42,26 @@ body {
 }
 
 .yankees1 {
-  background-image: url("/images/yankees1.jpeg");
+  background-image: url("../images/yankees1.jpeg");
 }
 .yankees2 {
-  background-image: url("/images/yankees2.jpeg");
+  background-image: url("../images/yankees2.jpeg");
 }
 .yankees3 {
-  background-image: url("/images/yankees3.jpeg");
+  background-image: url("../images/yankees3.jpeg");
 }
 .yankees4 {
-  background-image: url("/images/yankees4.jpeg");
+  background-image: url("../images/yankees4.jpeg");
 }
 .yankees5 {
-  background-image: url("/images/yankees5.jpeg");
+  background-image: url("../images/yankees5.jpeg");
 }
 .yankees6 {
-  background-image: url("/images/yankees6.jpeg");
+  background-image: url("../images/yankees6.jpeg");
 }
 
 .card {
-  background-image: url("/images/yankees_cardback_logo.png");
+  background-image: url("../images/yankees_cardback_logo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -88,7 +88,7 @@ body {
 #winOverlay {
   height: 60vh;
   width: 55vw;
-  background-image: url("/images/yankees_win.jpeg");
+  background-image: url("../images/yankees_win.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
